@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
+<script>
+    var style = 'div {width:0;height:0;box-shadow:';
+    var boxShadow = [];
+    var draw =[
+            ['595959', '606060', '616161', '616161', '474747', '3e3e3e', '323232', '2a2a2a', '6b6b6b', '6b6b6b', '727272', '727272'],
+            ['5a5a5a', '5f5f5f', '474747', '474747', '474747', '161616', '161616', '6b6b6b', '6b6b6b', '6b6b6b', '727272', '727272'],
+            ['5a5a5a', '5f5f5f', '474747', '474747', '474747', '161616', '161616', '6b6b6b', '6b6b6b', '6b6b6b', '727272', '727272'],
+            ['5a5a5a', '5f5f5f', '474747', '474747', '474747', '161616', '161616', '6b6b6b', '6b6b6b', '6b6b6b', '727272', '727272'],
+            ['5a5a5a', '5f5f5f', '474747', '474747', '474747', '161616', '161616', '6b6b6b', '6b6b6b', '6b6b6b', '727272', '727272'],
+            ['5a5a5a', '5f5f5f', '474747', '474747', '474747', '161616', '161616', '6b6b6b', '6b6b6b', '6b6b6b', '727272', '727272'],
+
+    ];
+    for(var y = 0; y < draw.length; y++){
+        for(var x = 0;x < draw[y].length; x++){
+            boxShadow.push((x * 5) + 'px ' +  (y * 5) + 'px ' + '4px 5px #' + draw[y][x]);
+        }
+    }
+    document.getElementsByTagName('style')[0].innerHTML = style + boxShadow.toString() + '}'
+</script>
